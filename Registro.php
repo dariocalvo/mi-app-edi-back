@@ -6,9 +6,5 @@
     }
 
 
-    if (isset $_FILES['avatar']){
-        var_dump($_FILES);
-    }else{
-        echo 'no se cargo imágen';
-    }
+   
 ?>
