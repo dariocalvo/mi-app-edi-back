@@ -7,12 +7,7 @@
 
     if (isset($_FILES)){
         var_dump($_FILES);
-        if ($_FILES)
-
-
-
-
-
+        
     }else{
         echo 'No llego imágen';
     }
