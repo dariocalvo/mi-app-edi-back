@@ -5,8 +5,14 @@
         echo 'No llegaron datos del usuario';
     }
 
-    if (isset($_FILE)){
-        var_dump($_FILE);
+    if (isset($_FILES)){
+        var_dump($_FILES);
+        if ($_FILES)
+
+
+
+
+
     }else{
         echo 'No llego imágen';
     }
