@@ -12,5 +12,4 @@
     }else{
         echo 'No llego imagen con los datos';
     }
-
 ?>
