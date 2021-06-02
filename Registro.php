@@ -4,13 +4,9 @@
     }else{
         echo 'No llegaron datos del usuario';
     }
-    
-    
-    
-    
-    
-    if (isset($_FILES)){
-        var_dump($_FILES);
+
+    if (isset($_FILE)){
+        var_dump($_FILE);
     }else{
         echo 'No llego imágen';
     }
