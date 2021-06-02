@@ -1,8 +1,6 @@
 <?php
-    if (!isset($_POST)){
-        $nombre= $_POST['usuario'];
-        $contraseña= $_POST['pass'];
-        echo ('Hola '.$nombre.'. Su contraseña es: '.$pass);
+    if (isset($_POST['datos'])){
+        echo ('Los datos llegaron con exito');
     }else{
         echo "No se recibieron datos.";
     }
