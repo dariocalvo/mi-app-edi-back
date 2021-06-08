@@ -9,7 +9,7 @@
         $usuario->email = $_POST['email'];
         $usuario->usuario = $_POST['usuario'];
         $usuario->pass = $_POST['contraseña'];
-        $archivo = 'usuarios/listaUsuarios.json'; 
+        $archivo = 'mi-app-edi-back/usuarios/listaUsuarios.json'; 
         $datos = json_encode($usuario);
         require ('funciones/guardarusuario.php');
     }else{
@@ -17,7 +17,7 @@
     }
 
     if (isset($_FILES['avatar'])){
-        $destino = 'img/usuarios/';
+        $destino = 'mi-app-edi-back/Img/usuarios/';
         $titulo = ($_POST['usuario'].'.jpg');
         $archivo = $_FILES['avatar'];
         require ('funciones/guardarImagen.php');
