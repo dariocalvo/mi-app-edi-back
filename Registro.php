@@ -9,7 +9,7 @@
         $usuario->email = $_POST['email'];
         $usuario->usuario = $_POST['usuario'];
         $usuario->pass = $_POST['contraseña'];
-        $archivo = 'https://app-calvo-back.herokuapp.com/usuarios/listaUsuarios.json'; 
+        $archivo = 'usuarios/listaUsuarios.json'; 
         $datos = json_encode($usuario);
         require ('funciones/guardarusuario.php');
     }else{
@@ -17,7 +17,7 @@
     }
 
     if (isset($_FILES['avatar'])){
-        $destino = 'https://app-calvo-back.herokuapp.com/Img/usuarios/';
+        $destino = 'Img/usuarios/';
         $titulo = ($_POST['usuario'].'.jpg');
         $archivo = $_FILES['avatar'];
         require ('funciones/guardarImagen.php');
