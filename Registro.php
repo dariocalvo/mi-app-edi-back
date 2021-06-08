@@ -1,15 +1,27 @@
 <?php
-    if (isset($_POST)){
-        var_dump($_POST);
-        echo 'Datos del usuario recibidos';
+    if (isset($_POST['usuario'])){
+        require "entidades/interfaz.php";
+        require "entidades/persona.php";
+        require "entidades/usuario.php";
+        
+        $usuario = new Usuario();
+        $usuario->nombre = $_POST['nombre'];
+        $usuario->email = $_POST['email'];
+        $usuario->usuario = $_POST['usuario'];
+        $usuario->pass = $_POST['contraseña'];
+        $archivo = 'usuarios/listaUsuarios.json'; 
+        $datos = json_encode($usuario);
+        require ('funciones/guardarusuario.php');
     }else{
-        echo 'No hay datos de usuario';
+        echo "Ocurrió un error al recibir datos de usuario. ";
     }
 
     if (isset($_FILES['avatar'])){
-        var_dump($_FILES);
-        echo 'se cargo una imagen';
+        $destino = 'img/usuarios/';
+        $titulo = ($_POST['usuario'].'.jpg');
+        $archivo = $_FILES['avatar'];
+        require ('funciones/guardarImagen.php');
     }else{
-        echo 'No llego imagen con los datos';
+        echo "No se subió una imagen para el usuario. ";
     }
 ?>
